@@ -92,18 +92,9 @@ However, most of agent architectures applications we proposed for robotic field.
 	\item new sources of information can be added later and data model should be adaptable enough.
 	%\item due to limited resources of autonomous robot each action has to be interruptible, what is not so important in web agent
 \end{enumerate}
-
 \end{comment}
 
 
-\begin{comment}
-Autonomous robot is field for study intelligent architectures. Three levels (as in \cite{alami1998architecture}):
-\begin{enumerate}
-	\item decision level 
-	\item functional level
-	\item execution level
-\end{enumerate}
-\end{comment}
 %\section{Related works}
  %\section{Research methodology}
 \gls{BDI} \cite{rao1995bdi} is a well know agent architecture. It is based on main concepts  \emph{Belief}, \emph{Desire} and \emph{Intention}, which ought to have an explicit representation in this type architecture. 
@@ -112,7 +103,9 @@ In this research, our goal is to analyse \gls{BDI} architecture application poss
 
 We  use the framework \cite{wieringa2014design} for design science. The result of a design is an artifact, based on actual or hypothetical stakeholder goals which are represented in Section \ref{sec:social-context}. 
 
+\begin{comment}
 The artifact is evaluated using adapted version of \gls{atam}. There are many proposal for software architecture evaluation based on quality requirements \cite{babar2004comparison}. The \gls{atam} \cite{kazman2000} has been widely adopted in the software industry and has many published cases. However, we simplify it to our research. We take our hypothetical business drivers, generate scenarios for important quality attributes and probe the architecture using scenario walk-through technique. Based on that, sensitivity points, trade-offs and risks are identified. % This technique was used in \gls{SAAM} \cite{kazman94saam}, the predecessor of \gls{ATAM}.
+\end{comment}
 
 The architecture is defined using the Views and Beyond approach \cite{bachmann2010documenting}. It is arranged in views, where architecturally important structures are described from a particular viewpoint.
 
@@ -192,19 +185,6 @@ The main reason of following decomposition is agents for achieving following qua
 \end{itemize}
  Separate \emph{RWA} element which contain modification required to connect to new or changed services.
 
-\subsection{\gls{cc} Shared Data View}
-\paragraph{}
-We use  \gls{cc} shared data view  \cite{bachmann2010documenting} to show how data is used and stored. This view consists of components who are either \emph{repositories} (and are represented with database symbols) or either as \emph{accessors} (standard UML components). \emph{Connectors} show how (read, write) data is accessed.
-\subsubsection{\gls{cc} Shared Data View packet: Agent}
-\paragraph{Primary presentation.} The primary presentation diagram is presented in \ref{fig:EAShareDataView}.
-\paragraph{Element catalog.} The component \emph{Interpreter} is processing unit, that does the main \gls{bdi} agent interpreter cycle. \emph{Events} is repository for events, that \emph{Interpreter} needs consider. These are submitted by getting messages from other agents (\emph{MessagesFacade}) or by sensing new information (\emph{Percept}). \emph{Interpreter} removes unimportant events and creates intentions from important ones, which are stored in \emph{IntentionStack} .\emph{PlansLibrary} represents repository of predefined plans. \emph{KB} is shows as external (to an agent) repository, since it is shared among several agents. However each agent is responsible (in term writing data) for particular subset of information in \emph{KB} and these subsets are disjoint. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\linewidth]{ExpertAgent/SharedData.png}
-	\caption{The \gls{ea} \gls{cc} Shared Data View}	
-	\label{fig:EAShareDataView}
-\end{figure}
 \end{comment}
 
 \subsection{Hybrid \gls{cc} view and module decomposition view: Agent}
@@ -300,7 +280,7 @@ This view visually indicates \begin{itemize}
 This represents use cases: "Evaluate impact of an architectural decision" and "Detect patterns of architectural decision dependencies" \cite{ven2006using}
 \end{comment}
 
-
+\begin{comment}
 \section{Architecture evaluation}
 \label{sec:evaluation}
 
@@ -381,6 +361,7 @@ The provided architecture is analysed with scenarios. All scenarios belong to a 
 		\end{tabular}
 	\end{center}
 \end{table}
+
 
 
 %\section{Assistant Agent Architecture. KISS approach}
@@ -499,6 +480,8 @@ The decision view shows that the \gls{BDI} architecture supports local cache and
 A \gls{BDI} architecture is based on interpreted methods, which are programmer created plans. This is intended to support modifiability, but architecture evaluation identifies that risks themes \emph{Testability} and \emph{Method, action design} relates back to this quality. This means a possibility of even negative impact of the \gls{BDI} architecture to modifiability in this context. Therefore, detailed impact of this design decision to modifiability could be verified only in a detailed design step.
 
 The architecture evaluation identified risk themes \emph{Redundant data tradeoff} and \emph{Method, action design} states decisions that have not been made. This doesn't mean any currently identified negative effect of the architecture and only emphasize important future decisions. This is different from risk theme \emph{testability}, which explicitly identifies negative impact of architecture to the testability quality.
+
+\end{comment}
 
 \section{Related works}
 
