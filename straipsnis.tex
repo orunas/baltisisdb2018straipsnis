@@ -321,25 +321,7 @@ The provided architecture is analysed with scenarios. All scenarios belong to a 
 			Id &
 			Quality \newline attribute&	Scenario \\		
 			\hline
-			\begin{comment}		
-			
-			Av1 & 
-			Availability  &
-			\begin{tabular}{r p{7cm} }
-				(Stimulus) & Platform service is unavailable \\
-				(Environment) & At runtime \\
-				(Response) & Situation detected and notified responsible users, system in unavailable until issues solved
-			\end{tabular}
-			\\ \hline
-			Av2 & 
-			Availability  &
-			\begin{tabular}{r p{7cm} }
-				(Stimulus) & Unavailable \gls{SP} service \\
-				(Environment) & At runtime \\
-				(Response) & Situation detected, local information is used end-user informed about situation
-			\end{tabular}
-			\\ \hline
-			\end{comment}
+
 			Pt1 &
 			Modifiability - \newline Portability  &
 			\begin{tabular}{r p{7cm} }
@@ -399,16 +381,7 @@ The provided architecture is analysed with scenarios. All scenarios belong to a 
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{comment}
-\paragraph{Modifiability} The quality refers complexity of changing the system. Portability is when changes are needed for execution in different environment. Therefore portability is treated as a specific case of modifiability \cite{bachmann2007modifiability}. We used from \cite{kazman94saam} adapted classification of changes in the system: 
-\begin{enumerate}
-	\item extension of capabilities, what is about adding new functionality or enhancing existing;
-	\item deletion of capabilities;
-	\item adaptation to new environment, what also includes adaptation to \gls{SP}s;
-	\item refactoring.
-\end{enumerate}
-First two are related with functionality of system and are visible to end-users whereas latter two directly not visible to user and are related to system qualities. Scenarios are provided for all categories.
-\end{comment}
+
 
 %\section{Assistant Agent Architecture. KISS approach}
 %\label{kiss-approach}
@@ -437,11 +410,7 @@ Concurrency introduction in a \gls{BDI} model reduce latency, however might add 
 Using the \gls{BDI} model with external \gls{kb} might negative affect latency (however may increase scalability, which performance elasticity to load) and gives a sensitivity point S5. 
 \paragraph{Pf2} The architecture supports scenario by instantiating new \emph{AssistantAgent} and \emph{ConversationalAgent} pair for each end-user. However adding more agents, which are bound to same shared resource \gls{kb} is sensitivity point related to performance (S6).
 \paragraph{Pf3} The system is sensitive to the size of \emph{MethodsLibrary} or \emph{KB}. Therefore a sensitivity point S8 is added.
-\begin{comment}
-\subsubsection{Availability}
-\paragraph{Av1} Scenario is not directly supported by architecture, which add dependency on cloud based services. When these platform services are unavailable whole system is unavailable, unless in later design stages special mechanisms are introduced. 
-\paragraph{Av2} Architecture supports scenarios when \gls{SP} service are unavailable, by introducing redundancy with \gls{kb}. When \gls{SP} services in unavailable local \gls{kb} information is used instead. 
-\end{comment}
+
 \subsubsection{Sensitivies, tradeoffs and risks.}
 Summary of risks, sensitivities and tradeoffs is presented in Table \ref{tbl:risks}. In original \gls{ATAM} each tradeoff should be categorized as a risk or non-risk. Here we take all sensitivities and tradeoffs as potential risks. All risks are grouped in risk themes. An additional impact measure is added to risk theme. High impact means that additional decisions required for mitigating these risks in this theme. %todo kodel reiktu. 
 Low impact means that these risks should be taken into account and monitored, whether some deviations might occur in case of changing requirements.
