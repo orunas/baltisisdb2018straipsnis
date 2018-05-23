@@ -485,11 +485,21 @@ The architecture evaluation identified risk themes \emph{Redundant data tradeoff
 
 \section{Related works}
 
+%https://www.researchgate.net/publication/308085341_The_return_of_the_chatbots
+
 The \gls{FIPA} organization provided personal travel assistance specification \cite{fipa000132000fipa}. It provides a scenario and an architecture of a potential distributed agent based system, where an end-user can get assistance and support in a trip planning. That show quite big expectations towards intelligent agents for the semantic web. However, we still don't see today widespread intelligent agents like the personal travel assistant presented by \gls{FIPA}.
 
 The research \cite{dickinson2005Agents} reviews design choices for integrating agents with web services. Our approach corresponds to the presented theme 3. It is about agents composing simple (atomic) services. It is illustrated by integration web services with a Nuin \gls{BDI} framework. However, the \gls{BDI} architecture challenges pointed here by us are not covered in the referenced paper. The research doesn't give any information how services, provided by the agent, could be used.
 
 The are publications about integrating  Semantic Web and Agent programming. The most prominent paper is \cite{klapiscak2009jasdl}, which proposes JASDL (Jason AgentSpeak - DescriptionLogic). An AgentSpeak(L) implementation, Jason \cite{bordini2007programming} is customized. However, the paper focuses on enabling ontological reasoning in an \gls{BDI} agent.
+
+\cite{GarciaSanchez2008Combining} presented SEMMAS, an ontology-based framework which combines Intelligent Agents with Semantic Web Services for the integrated access to biological data
+sources. In this architecture service consumers, providers and main platform services are wrapped by corresponding agents. Agents doesn't have \gls{kb} for storing related domain information, but use obtain from service wrapper agents. This multiple agent, without explicit \gls{kb} setting is different from our approach.
+
+In \cite{Garrido2017SmartTourist} was presented a prototype of smart tourist information points with Maxine platform based Embodied Conversational Agents (ECAs). As in our approach it relies on system with its own \gls{kb}. % It is based on lightweight ontology  TITERIA (Touristic Information of TEruel for Intelligent Agents). 
+A conversation with end-user is governed by AIML (Artificial Intelligence Modeling Language) descriptions which can be extended with custom scripts. These scripts can be used for executing external services. However, the architecture doesn't support building proactive agents. This is different from our and other \gls{BDI} based approaches.  
+
+A Collaborative Travel Agent System (CTAS) was proposed in \cite{Chiu2009Collaborative}, which is expected to provide coordination and integration of disparate information and services. The taken approach is a Multi agent information system architecture. We see functional decomposition into  processes and those into agents. This is different from our approach where information and services integration is done by a single \gls{BDI} agent. %not by a collaboration of multiple agents.
 
 Also there is an research in application \gls{BDI} for conversational management. \cite{wong2012conversation} focuses on "free-flow" dialogues. \cite{nguyen2005agent} focuses on task-based conversation.
 
